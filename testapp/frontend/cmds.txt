@@ -1,0 +1,174 @@
+    1  git clone https://github.com/pallavi-vetal/devoptraining.git
+    2  ls
+    3  cd devoptraining/
+    4  cat >index.html
+    5  ls
+    6  cd devoptraining/
+    7  ls
+    8  rm Untitled 
+    9  git add index.html
+   10  git status
+   11  git commit -m "initial commit"
+   12  gti status
+   13  git staus
+   14  git status
+   15  clear
+   16  git log
+   17  git push 
+   18  clear
+   19  git branch -v
+   20  git branch dev
+   21  git branch -v
+   22  git checkout dev
+   23  git add *
+   24  git commit -m "index.html updated"
+   25  git push
+   26  git branch -v
+   27  git log
+   28  git checkout master
+   29  git merge dev
+   30  git status
+   31  git branch -v
+   32  git log
+   33  git checkout dev
+   34  clear
+   35  git add *
+   36  git commit -m "dev changes"
+   37  git checkout master
+   38  ls
+   39  git add *
+   40  git commit -m "master changes"
+   41  git merge dev
+   42  git add *
+   43  git commit -m ""fixing"
+   44  "
+   45  git merge dev
+   46  git remote -v
+   47  git push --set-upstream origin master:dev
+   48  clear
+   49  git add *
+   50  git commit -m "local"
+   51  git push
+   52  git push --set-upstream origin master:dev
+   53  git pull
+   54  git pull origin dev
+   55  git checkout master
+   56  git add *
+   57  git commit -m "pull"
+   58  git pull
+   59  git push --set-upstream origin master:dev
+   60  sudo yum -y install java-1.8.0-openjdk.x86_64
+   61  sudo yum -y remove java-1.7.0-openjdk
+   62   sudo wget -O /etc/yum.repos.d/jenkins.repo http://pkg.jenkins-ci.org/redhat-stable/jenkins.repo
+   63  sudo  rpm --import http://pkg.jenkins-ci.org/redhat-stable/jenkins-ci.org.key
+   64  sudo systemctl start jenkins
+   65   sudo yum install -y  jenkins
+   66  sudo systemctl start jenkins
+   67  sudo systemctl enable jenkins
+   68  sudo service jenkins start
+   69  clear
+   70  sudo chkconfig jenkins on
+   71  sudo cat /var/lib/jenkins/secrets/initialAdminPassword
+   72  which ssh
+   73  cd devoptraining/
+   74  git add *
+   75  git checkout dev
+   76  git commit -m "jenkins demo"
+   77  git push --set-upstream origin master:dev
+   78  sudo yum -y install java-1.8.0-openjdk-devel
+   79  clear
+   80  mvn
+   81  wget http://www-us.apache.org/dist/maven/maven-3/3.5.4/binaries/apache-maven-3.5.4-bin.tar.gz
+   82  tar xzvf apache-maven-3.3.9-bin.tar.gz
+   83  tar xzvf apache-maven-3.3.4-bin.tar.gz
+   84  tar xzvf apache-maven-3.5.4-bin.tar.gz
+   85  sudo mv apache-maven-3.5.4 /usr/local
+   86  cd /usr/local/apache-maven-3.5.4/bin/mvn
+   87  cd /usr/local/apache-maven-3.5.4/bin
+   88  ls
+   89  cd ~/
+   90  clear
+   91  sudo yum install -y docker
+   92  sudo chkconfig docker on
+   93  sudo usermod -a -G docker ec2-user
+   94  docker info
+   95* doc
+   96  docker -H
+   97  docker -H host
+   98  ls
+   99  ls -a
+  100  ls -aul
+  101  clear
+  102  docker info
+  103  clear
+  104  man systemctl
+  105  pwd
+  106  cd testapp/frontend/
+  107  docker build -t myapache:1.0 .
+  108  clear
+  109  docker images
+  110  docker ps
+  111  docker run -d
+  112  docker run -d myapache
+  113  docker run -d--name mytestapache -p 9000:80 myapache:1.0
+  114  docker run -d --name mytestapache -p 9000:80 myapache:1.0
+  115  docker ps
+  116  docker ps -a
+  117  docker logs myapache
+  118  docker logs myapache:1.0
+  119  docker logs mytestapache
+  120  docker stop mytestapache
+  121  docker rm mytestapache
+  122  docker ps
+  123  ps -a
+  124  docker ps -a
+  125  docker run -d --name mytestapache -p 9000:80 myapache:1.0
+  126  docker ps
+  127  docker run -d --name mytestapache -p 9000:80 myapache:1.0
+  128  docker stop mytestapache
+  129  docker rm mytestapache
+  130  clear
+  131  docker run -d --name mytestapache -p 9000:80 myapache:1.0
+  132  docker ps
+  133  history
+  134  docker ps -a
+  135  docker logs myapache
+  136  docker logs mytestapache
+  137  docker ps
+  138  docker stop mytestapache
+  139  docker rm mytestapache
+  140  docker run -d --name myubantutest -p 9000:80 myubantu:18.04
+  141  docker run -d myubantu
+  142  FROM ubantu:18.04
+  143  MAINTAINER pallavisv21@gmail.com
+  144  RUN apt-get -y update
+  145  RUN apt-get -y install Nginx
+  146  ADD code /usr/local/nginx/html
+  147  EXPOSE 80
+  148  ENV BACKENDLB=test
+  149  CMD ["nginx","-g","daemon off;"]
+  150  docker build -t myubantu:18.04
+  151  docker build -t myubantu:18.04 .
+  152  docker run -d myubantu
+  153  docker images
+  154  docker run -d myubantu
+  155  docker run -d myubuntu
+  156  docker run -d myubuntu:18.04
+  157  docker run -d myubantu:18.04
+  158  docker run -d --name mytestubantu -p 9000:80 myubantu:18.04
+  159  docker ps
+  160  docker ps -a
+  161  clear
+  162  docker build -t myubantu:18.04 .
+  163  docker ps
+  164  docker stop mytestubantu
+  165  docker rm mytestubantu
+  166  clear
+  167  docker run -d myubuntu:18.04
+  168  docker run -d myubantu:18.04
+  169  docker run -d --name mytest -p 9000:80 myubantu:18.04
+  170  docker ps
+  171  man docker
+  172  docker ps
+  173  history
+  174  history >cmds.txt
